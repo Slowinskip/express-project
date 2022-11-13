@@ -17,8 +17,7 @@ app.set('view engine', '.hbs');
 app.use(express.static(path.join(__dirname, '/public')));
 
 app.get('/style.css', (req, res) => {
-    res.show('style.css');
-
+    res.sendFile(path.join(__dirname, `/style.css`));
   });
 
 
