@@ -16,6 +16,12 @@ app.set('view engine', '.hbs');
 
 app.use(express.static(path.join(__dirname, '/public')));
 
+app.get('/style.css', (req, res) => {
+    res.show('style.css');
+
+  });
+
+
 app.use('/user', (req, res, next) => {
     res.render('login');  
 
